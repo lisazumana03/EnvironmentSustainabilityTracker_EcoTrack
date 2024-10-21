@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/css/UserListStyle.css}">
+    <meta charset="UTF-8">
+    <title>Users Page</title>
+</head>
+<body>
+<h1> User Details </h1>
+<table border="1,5">
+    <thead>
+        <tr>
+            <th> User ID </th>
+            <th> Username </th>
+            <th> Name </th>
+            <th> Email </th>
+            <th> Password </th>
+            <th> Action </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="user : ${userList}">
+            <td th:text="${user.userId}"></td>
+            <td th:text="${user.username}"> </td>
+            <td th:text="${user.name}">  </td>
+            <td th:text="${user.email}"> </td>
+            <td th:text="${user.password}"> </td>
+            <td>
+                <a th:href="@{/eco-track/usersList/edit/{userId} (userId=${user.userId})}" onclick="return confirm('You want to edit?')">Edit</a>
+                <a th:href="@{/eco-track/usersList/delete/{userId} (userId=${user.userId})}" onclick="return confirm('Are you sure?')">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<a th:href="@{/eco-track/home}">
+    <button type="button" class="return">Back Home</button>
+</a>
+</body>
+</html>

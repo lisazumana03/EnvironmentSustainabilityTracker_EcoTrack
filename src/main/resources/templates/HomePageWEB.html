@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <link rel="stylesheet" th:href="@{/css/HomePageStyle.css}" href="/HomePageStyle.css">
+        <title> Welcome </title>
+    </head>
+    <body>
+    <div class="container">
+        <!--Hamburger icon for the menu directory-->
+        <nav>
+            <div class="hamburger" id="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+
+        <!--The Main content-->
+        <div class="header">
+            <h1> Main Menu - Environment Sustainability Tracker</h1>
+        </div>
+    </nav>
+
+    <ul class="nav-links" id="nav-links">
+        <li><a th:href="@{/eco-track/usersList}">Registered Users (accessible via admins only)</a></li>
+        <li><a th:href="@{/eco-track/communityPage}">Community Engagement</a></li>
+        <li><a th:href="@{/eco-track/education-hub}">Educational Content</a></li>
+        <li><a th:href="@{/eco-track/energy}"> Energy Log (energy consumption calculation)</a></li>
+        <li><a th:href="@{/eco-track/water}">Water Log (water consumption calculator)</a></li>
+        <li><a th:href="@{/eco-track/reviewPage}">Review</a></li>
+        <li><a th:href="@{/eco-track/login}">Sign Out</a></li>
+    </ul>
+
+        <p> Welcome to the EcoTrack - Environmental Sustainability Tracker Application. How can we help you today? <br><b>(PLEASE NOTE THAT THE APPLICATION'S NEW FEATURES WILL BE DEVELOPED SOON, WE THANK YOU FOR YOUR PATIENCE)</b></p>
+        <script th:src="@{/js/HomePageScript.js}"></script>
+    </div>
+    </body>
+
+    <footer>&copy; 2024 EcoTrack-Environment Sustainability Tracker. All rights reserved.</footer>
+
+</html>

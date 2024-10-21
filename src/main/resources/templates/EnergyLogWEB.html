@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoTrack - Energy Usage</title>
+  <link rel="stylesheet" th:href="@{/css/EnergyStyle.css}">
+</head>
+<body>
+
+<header>EcoTrack - Energy Usage</header>
+
+<nav>
+  <ul>
+    <li><a th:href="@{/eco-track/water}">Water Consumption</a></li>
+    <!--li><a href="wastelog.html">Waste Management</a></li!-->
+  </ul>
+</nav>
+
+<div class="container">
+  <h1>Energy Usage Monitor</h1>
+  <div class="feature">
+    <div class="feature-item">
+      <h3>Real-Time Energy Consumption</h3>
+      <canvas id="energyChart"></canvas>
+    </div>
+    <div class="feature-item">
+      <h3>Energy Efficiency Tips</h3>
+      <p id="energyTips">Improve efficiency by turning off devices when not in use.</p>
+      <button id="energyTipsButton">View More Tips</button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h1>Track Your Energy Consumption</h1>
+  <form id="energyForm">
+    <h3>Daily Energy Usage</h3>
+    <label for="energyType">Energy Type:</label>
+    <select id="energyType" name="energyType">
+      <option value="electricity">Electricity</option>
+      <option value="gas">Gas</option>
+      <option value="waterHeating">Water Heating</option>
+    </select>
+
+    <label for="amount">Amount (kWh):</label>
+    <input type="number" id="amount" name="amount" required>
+
+    <button type="submit">Track Energy Usage</button>
+  </form>
+
+  <div class="progress-container">
+    <h3>Energy Goal Progress</h3>
+    <div id="energyProgress"></div>
+  </div>
+
+  <div class="chart-container">
+    <h3>Energy Usage Overview</h3>
+    <canvas id="energyChart"></canvas>
+  </div>
+</div>
+
+<button type="button" class="return"><a th:href="@{/eco-track/home}"> Back home </a></button>
+
+<footer>&copy; 2024 EcoTrack - Environment Sustainability Tracker. All rights reserved.</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script th:src="@{/js/EnergyScript.js}"></script>
+
+</body>
+</html>

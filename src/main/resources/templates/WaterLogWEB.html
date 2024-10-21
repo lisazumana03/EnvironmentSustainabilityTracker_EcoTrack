@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoTrack - Water Consumption</title>
+  <link rel="stylesheet" th:href="@{/css/WaterStyle.css}">
+</head>
+<body>
+
+<header>EcoTrack - Water Consumption</header>
+
+<nav>
+  <ul>
+    <li><a th:href="@{/eco-track/energy}">Energy Usage</a></li>
+    <li><!--a th:href="@{/eco-track/water}">Water Consumption</a></li!-->
+    <!--li><a href="wastelog.html">Waste Management</a></li!-->
+  </ul>
+</nav>
+
+<div class="container">
+  <h1>Water Consumption Tracker</h1>
+  <div class="feature">
+    <div class="feature-item">
+      <h3>Daily Water Consumption</h3>
+      <canvas id="waterChart"></canvas>
+    </div>
+    <div class="feature-item">
+      <h3>Water Efficiency Tips</h3>
+      <p id="waterTips">Fix leaky faucets to save water.</p>
+      <button id="waterTipsButton">View More Tips</button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h1>Track Your Water Consumption</h1>
+  <form id="waterForm">
+    <h3>Daily Water Usage</h3>
+    <label for="activity">Activity:</label>
+    <select id="activity" name="activity">
+      <option value="drinking">Drinking</option>
+      <option value="cooking">Cooking</option>
+      <option value="bathing">Bathing</option>
+      <option value="cleaning">Cleaning</option>
+    </select>
+
+    <label for="amount">Amount (Liters):</label>
+    <input type="number" id="amount" name="amount" required>
+
+    <button type="submit">Track Water Usage</button>
+  </form>
+
+  <div class="progress-container">
+    <h3>Water Goal Progress</h3>
+    <div id="waterProgress"></div>
+  </div>
+
+  <div class="chart-container">
+    <h3>Water Usage Overview</h3>
+    <canvas id="waterChart"></canvas>
+  </div>
+</div>
+
+<button type="button" class="return"><a th:href="@{/eco-track/home}"> Back home </a></button>
+
+<footer>&copy; 2024 EcoTrack. All rights reserved.</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script th:src="@{/js/WaterScript.js}"></script>
+
+</body>
+</html>

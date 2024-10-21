@@ -1,0 +1,92 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:antiquewhite;
+    background-image: url('pngtree-care-for-the-environment-low-carbon-travel-public-welfare-poster-image_137867.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw 110vh;
+}
+
+.container{
+    max-width:800px;
+    margin:40px auto;
+    padding:20px;
+    background-color:#fff;
+    border:1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1{
+    margin-top:0;
+    background-color: limegreen;
+    color: white;
+}
+
+form{
+    background-color: #0abAB5;
+    text-align:left;
+    padding: 16px 32px;
+}
+
+label{
+    display:block;
+    margin-bottom:10px;
+}
+
+input[type=text],textarea{
+    margin: 14px 0;
+    width: 45%;
+    height: 55%;
+    padding: 11px 22px;
+}
+
+.submit{
+    background-color: limegreen;
+}
+
+.return{
+    background-color: turquoise;
+}
+
+button{
+    cursor: pointer;
+    margin: 14px 4px;
+    color: white;
+    border-radius: 4px;
+    padding: 16px 32px;
+    font-size: 20px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.submit{
+    background-color: limegreen;
+}
+
+.return{
+    background-color: orange;
+}
+
+.comment{
+    margin-top:20px;
+}
+
+.comment{
+    margin-bottom:20px;
+    padding:10px;
+    border-bottom:1px solid #ccc;
+}
+
+.comment span{
+    font-size:14px;
+    color:#666;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px 0;
+  background-color: limegreen;
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 8px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang = "en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Engagement</title>
+    <link rel="stylesheet" th:href="@{/css/CommunityEngagementStyle.css}">
+    <script th:src="@{/js/CommunityEngagementScript.js}" defer></script>
+</head>
+
+<body>
+<div class="container">
+    <h1>Leave a comment</h1>
+    <form th:action="@{/eco-track/communitySubmit}" th:object="${event}" method="post">
+        <input type="hidden" th:field="*{eventId}">
+        <label >Name :</label>
+        <input type="text" th:field="*{eventName}" required>
+        <label>Date of event :</label>
+        <input type="date" th:field="*{localDate}" required>
+        <label>Avatar: </label>
+        <select th:field="*{avatar}" required>
+            <option value="😊">Smiling Face</option>
+            <option value="🤔">Thinking Face</option>
+            <option value="👻">Ghost</option>
+            <option value="🤖">Robot</option>
+        </select>
+        <label>Comment (anything more you would like to add for the upcoming event:</label>
+        <textarea th:field="*{comment}" required></textarea><br>
+        <button type="submit" class="submit" th:action="@{/eco-track/communitySubmit}">Post</button>
+        <a th:href="@{/eco-track/home}">
+            <button type="button" class="return"> Back </button>
+        </a>
+    </form>
+
+    <div class="events-container">
+        <h2>Upcoming Events</h2>
+        <ul id="eventsList"></ul>
+    </div>
+</div>
+</body>
+
+<footer>&copy; 2024 EcoTrack - Environment Sustainability Tracker. All rights reserved.</footer>
+
+</html>

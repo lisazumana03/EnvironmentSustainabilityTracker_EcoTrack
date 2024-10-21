@@ -1,0 +1,254 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f4f7f6;
+  color: #333;
+  padding: 20px;
+  line-height: 1.6;
+  background-image: url(pngtree-care-for-the-environment-low-carbon-travel-public-welfare-poster-image_137867.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw 110vh;
+}
+
+header {
+  background-color: limegreen;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  background-color: turquoise;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #ffeb3b;
+}
+
+.container {
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+}
+
+h1 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.feature {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.feature-item {
+  background: #f9f9f9;
+  padding: 15px;
+  width: 48%;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #4caf50;
+}
+
+button{
+        background-color: #4caf50;
+        cursor: pointer;
+        margin: 14px 4px;
+        border: black;
+        color: white;
+        padding: 16px 32px;
+        font-size: 16px;
+        text-align: center;
+}
+
+.return{
+    background-color: turquoise;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Form Styles */
+form {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+form h3 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Progress Bar Styles */
+.progress-container {
+  margin-top: 20px;
+  padding: 10px;
+  background: #e0f2f1;
+  border-radius: 6px;
+}
+
+#waterProgress, #wasteProgress, #energyProgress {
+  color: #333;
+  font-size: 1.1rem;
+}
+
+/* Chart Container */
+.chart-container {
+  margin-top: 30px;
+}
+
+canvas {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px 0;
+  background-color: limegreen;
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 8px;
+}
+
+/* Energy-Specific Styles */
+.energy-feature {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.energy-feature-item {
+  background: #f9f9f9;
+  padding: 15px;
+  width: 48%;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.energy-feature-item h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #ff9800; /* Use a distinct color for energy features */
+}
+
+.energy-tips-container {
+  background: #fce4ec;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.energy-tips-container h3 {
+  color: #ff5722;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .feature, .energy-feature {
+    flex-direction: column;
+  }
+
+  .feature-item, .energy-feature-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+/* Add this to your CSS */
+#energyProgress {
+  color: #333;
+  font-size: 1.1rem;
+  transition: width 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .feature, .energy-feature {
+    flex-direction: column;
+  }
+
+  .feature-item, .energy-feature-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Adjust heading size */
+  }
+
+  button {
+    font-size: 1rem; /* Increase button text for readability */
+    padding: 12px 18px; /* Increase padding for touch targets */
+  }
+
+  input, select {
+    font-size: 1rem; /* Increase font size for form fields */
+    padding: 10px; /* Larger touch area */
+  }
+
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <link rel="stylesheet" th:href="@{/css/ReviewStyle.css}">
+        <title> Review Page </title>
+    </head>
+    <body>
+        <h1> Review Page </h1>
+        <form id="reviewForm" th:action="@{/eco-track/submit}" th:object="${review}" method="post">
+            <input type="hidden" th:field="*{reviewId}">
+            <label>Name: </label><br>
+            <input type="text" th:field="*{name}" required><br>
+            <label>Email: </label><br>
+            <input type="text" th:field="*{email}" required><br>
+            <label>Review: </label><br>
+            <input type="text" th:field="*{reviewText}" required><br>
+            <label>Please select your rating out of 10: </label>
+            <input type="number" th:field="*{rating}" min="0" max="10" required><br>
+            <button type="submit" class="submit" th:action="@{/eco-track/submit}">Submit your review</button>
+            <button type="reset" class="reset">Reset</button>
+            <a th:href="@{/eco-track/home}">
+                <button type="button" class="cancel"> Cancel (Go Back) </button>
+            </a>
+        </form>
+
+        <footer>&copy; 2024 EcoTrack - Environment Sustainability Tracker. All rights reserved.</footer>
+
+        <script th:src="@{/js/ReviewScript.js}" defer></script>
+    </body>
+</html>

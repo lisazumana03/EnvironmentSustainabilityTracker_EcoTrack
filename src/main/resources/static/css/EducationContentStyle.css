@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 35px;
+    padding: 17px, 34px;
+    font-size: 19px;
+    background-image: url(pngtree-care-for-the-environment-low-carbon-travel-public-welfare-poster-image_137867.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 120vh;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px 0;
+  background-color: limegreen;
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 8px;
+}
+
+button{
+        cursor: pointer;
+        margin: 14px 4px;
+        border-radius: 4px;
+        color: white;
+        padding: 16px 32px;
+        font-size: 16px;
+        border: 1px solid black;
+        text-align: center;
+}
+
+h1{
+    background-color: limegreen;
+    color: white;
+    text-align: center;
+    padding: 16px 32px;
+    display: flex;
+}
+
+h2{
+    color: white;
+    background-color: turquoise;
+    text-align: center;
+    padding: 16px 32px;
+    display: flex;
+}
+
+h3{
+    color: white;
+    background-color: orange;
+    text-align: center;
+    padding: 16px 32px;
+    display: flex;
+}
+
+
+
+.home{
+   background-color: turquoise;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <link rel="stylesheet" th:href="@{/css/RegistrationPageStyle.css}">
+        <title> Register </title>
+    </head>
+    <body>
+        <h1> Register </h1>
+        <form id="registrationForm" th:action="@{/eco-track/registerSubmit}" th:object="${user}" method="post">
+            <label> Username: </label><br>
+            <input type="text" th:field="*{username}" required><br>
+            <label> Name (First Name & Last Name): </label><br>
+            <input type="text" th:field="*{name}" required><br>
+            <label> Email: </label><br>
+            <input type="text" th:field="*{email}" required><br>
+            <label> Please type your password: </label><br>
+            <input type="password" minlength="4" th:field="*{password}" required><br>
+
+            <button type="submit" class="registerBtn" th:action="@{/eco-track/registerSubmit}"><a th:href="@{/eco-track/home}"> Register </a></button>
+            <button type="button" class="cancel"> Cancel </button>
+
+
+        </form>
+        <p> Already registered, <a th:href="@{/eco-track/login}">Login</a></p>
+        <script th:src="@{/js/RegistrationPageScript.js}"></script>
+    </body>
+
+    <footer>&copy; 2024 EcoTrack - Environment Sustainability Tracker. All rights reserved.</footer>
+
+</html>

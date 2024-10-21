@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/ReviewListStyle.css}">
+    <title>Saved Reviews</title>
+</head>
+<body>
+<h1> Reviews List </h1>
+<table border="4">
+    <thead>
+        <tr>
+            <th> Review ID </th>
+            <th> Name </th>
+            <th> Email </th>
+            <th> Review </th>
+            <th> Rating </th>
+            <th> Commands </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="review : ${reviewList}">
+            <td th:text="${review.reviewId}"> </td>
+            <td th:text="${review.name}"> </td>
+            <td th:text="${review.email}"> </td>
+            <td th:text="${review.reviewText}"> </td>
+            <td th:text="${review.rating}"> </td>
+
+            <td>
+            <a th:href="@{/eco-track/reviewsList/edit/{reviewId} (reviewId=${review.reviewId})}" onclick="return confirm('You want to edit?')">Edit</a>
+            <a th:href="@{/eco-track/reviewsList/delete/{reviewId} (reviewId=${review.reviewId})}" onclick="return confirm('Are you sure?')">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<a th:href="@{/eco-track/home}">
+    <button type="button" class="return"> Back to the main page </button>
+</a>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/CommunityListStyle.css}">
+    <title>Comment List</title>
+</head>
+<body>
+<table border="4">
+    <thead>
+    <tr>
+        <th> Event ID </th>
+        <th> Event Name </th>
+        <th> Avatar </th>
+        <th> Date </th>
+        <th> Comment </th>
+        <th> Commands </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="event : ${communityList}">
+        <td th:text="${event.eventId}"> </td>
+        <td th:text="${event.eventName}"> </td>
+        <td th:text="${event.localDate}"> </td>
+        <td th:text="${event.avatar}"> </td>
+        <td th:text="${event.comment}"> </td>
+
+        <td>
+            <a th:href="@{/eco-track/communityList/edit/{eventId} (eventId=${event.eventId})}" onclick="return confirm('You want to edit?')">Edit</a>
+            <a th:href="@{/eco-track/communityList/delete/{eventId} (eventId=${event.eventId})}" onclick="return confirm('Are you sure?')">Delete</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<a th:href="@{/eco-track/home}">
+    <button type="button" class="return"> Back home </button>
+</a>
+
+</body>
+</body>
+</html>
